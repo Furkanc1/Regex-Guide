@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+    <form>
+        <input id="text" placeholder="Type Email here" type="text"><br><br>
+        <button onclick="validate()" type="button"> Submit </button>
+        <script>
+            const validate = () => {
+    let mail = document.querySelector("#text");
+
+    let regx = /^([a-zA-Z0-9\._]+)@([a-a-zA-z0-9])+.([a-z]+)(.[a-z]+)(.[a-z]+)?$/
+
+    if(regx.text(mail)){
+        console.log(`you have provided a valid Email Adress`)
+        return true;
+    } else {
+        console.log(`Sorry! Incorrect Email ID`)
+        return false;
+    }
+};
+        </script>
+    </form>
+</body>
+</html>
